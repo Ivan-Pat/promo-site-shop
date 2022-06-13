@@ -12,7 +12,7 @@
 const menuCatalog = document.querySelector(".section-catalog");
 const catalogHeaderBut = document.querySelector(".button-catalog")
 
-catalogHeaderBut = document.addEventListener("click", ()=> {
+catalogHeaderBut.addEventListener("click", ()=> {
   menuCatalog.classList.toggle("catalog_active")    
 }) 
 
