@@ -1,0 +1,293 @@
+.section-footer {
+    background:  #FEB200;
+    padding: 1rem;
+}
+.footer-upper {
+    @include min760 {
+        max-width: 960px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 0.5rem;
+    }
+    @include min1440 {
+        max-width: 1440px;
+        flex-direction: row;
+    }
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 0 auto;
+    //max-width: 320px;
+    min-height: 300px;
+}
+.footer-lower {
+    @include min760 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        //max-width: 960px;
+    }
+    @include min1440 {
+        max-width: 1440px;
+    }
+    border-top: 2px solid #E5E5E5;
+    padding-top: 1rem;
+    color: #fff;
+    margin: 0 auto;
+    p {
+        text-align: center;
+        font: 400 0.9rem/1.7 OpenSans;
+    }
+}
+.footer-wrapper-box {
+    @include min760 {
+        width: auto;
+        display: block;
+        height: 70px;
+    }
+    @include min1440 {
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+
+    }
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-logo {
+    @include min760 {
+        width: 160px;
+        height: 70px;
+        position: relative;
+        top: 30px;
+    }
+    @include min1440 {
+        position: static;
+    }
+    width: 104px;
+    height: 46px;
+}
+//============
+
+.footer-form {
+    @include min760 {
+        flex-direction: row;
+        flex: 0 0 80%;
+        height: auto;
+        justify-content: flex-start;
+        margin-right: 15%;
+    }
+    @include min1440 {
+        flex: 0 0 100%;
+        justify-content: start;
+        padding-top: 1rem;
+        padding-left: 25%;
+        max-width: none;
+    }
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+    max-width: 500px;
+    width: 100%;
+    justify-content: space-between;
+    align-self: center;
+    &__input {
+        @include min760 {
+            flex: 0 0 55%;
+        }
+        @include min1440 {
+            flex: 0 0 28%;
+            
+        }
+        display: inline-block;
+        padding-left: 1rem;
+        width: 100%;
+        height: 42px;
+        border-radius: 0.5rem;
+        border: none;
+        &:active {
+            border:  solid 1px  #000;
+        }
+        &::placeholder {
+            font: 400 1rem Ubuntu;
+        }
+    }
+    &__button {
+        @include min760 {
+            flex: 0 0 25%;
+            margin-left: 1rem;
+        }
+        @include min1440 {
+            flex: 0 0 15%;
+            
+            
+        }
+        display: inline-block;
+        width: 100%;
+        height: 42px;
+        border-radius: 0.5rem;  
+        border: none;
+        background: #302D2D;
+        color: #fff;
+        font: 400 1rem Ubuntu;
+    }
+}
+//========================
+.footer-network {
+
+    display: inline-block;
+    align-self: flex-end;
+    &__link {
+        display: inline-block;
+        width: 23px;
+        height: 23px;
+        font-size: 23px;
+        color: #fff;
+    }
+}
+.network-footer-mobile {
+    @include min760 {
+        display: none;
+    }
+}
+.network-footer-pad {
+    @include min760 {
+        height: 40px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    @include min1440 {
+        display: none;
+    }
+    display: none;
+}
+.network-footer-desktop {
+    @include min1440 {
+        display: block;
+    }
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: none;
+}
+
+//=============================
+.footer-title-wrapper {
+    @include min760 {
+        margin-bottom: 1rem;
+    }
+
+
+}
+.footer-title-mobile {
+    @include min1440 {
+        display: none;
+    }
+}
+.footer-title-desktop {
+    @include min1440 {
+        display: block;
+    }
+    display: none;
+}
+.footer-title {
+    @include min760 {
+        position: relative;
+        top: -20px;
+
+    }
+    @include min1440 {
+        position: static;
+    }
+    color: #fff;
+    font: 700 1.1rem/1.5rem Ubuntu;
+    max-width: 167px;
+}
+.footer-subtitle {
+    @include min760 {
+        font-size: 1.1rem;
+    }
+    @include min1440 {
+        position: relative;
+        top: 60px;
+
+    }
+    margin-top: 30px;
+    color: #fff;
+    font: 400 0.8rem/1rem Ubuntu;
+}
+//============================
+
+.footer-map {
+    @include min760 {
+        display: flex;
+    }
+    @include min1440 {
+        max-width: 460px;
+        flex-direction: row;
+        padding: 0;
+        position: relative;
+        padding-right: 150px;
+    }
+    
+    display: none;
+    flex: 0 0 55%;
+    padding-left: 10%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+    width: 290px;
+    height: 150px;
+    position: relative;
+    top: 30px;
+    color: #fff;
+    h2 {
+        font: 700 1rem Ubuntu;
+        width: 100%;
+        color: #F9F9F9;
+        @include min1440 {
+            max-width: 310px;
+
+        }
+    }
+    &__link {
+        color: #E8E7E7;
+        font: 400 1rem Ubuntu;
+        width: 145px;
+    }
+}
+//============================
+.footer-blockPay {
+    @include min1440 {
+        display: flex;
+    }
+    width: 545px;
+    height: 250px;
+    background: #fff;
+    border-radius: 10px;
+    
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    &__logo {
+        width: 139px;
+        height: 60px;
+    }
+    &__card {
+        width: 140px;
+        height: 35px;
+    }
+    &__text {
+        font: 400 1rem Ubuntu;
+        color: #8A8888;
+        text-align: justify;
+    }
+}

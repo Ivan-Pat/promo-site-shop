@@ -1,0 +1,454 @@
+.header-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.header-upper {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    background: #fff;
+}
+.header-lower {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: flex-end;
+    align-items: center;
+}
+
+//=================================
+.header-search {
+    @include min760 {
+        display: block;
+    }
+    position: relative;
+    display: none;
+    &__input {
+        border: none;
+        width: 30px;
+        height: 30px;
+        padding: 0 24px 0 10px ;
+        transition: width 0.3s ease;
+        position: relative;
+        z-index: 1;
+        background: none;
+        opacity: 0;
+        &:focus {
+            width: 200px;
+            border: 1px solid #000;
+            z-index: 0;
+            opacity: 1;
+            //right: 25px;
+        }
+
+    }
+
+    &__button {
+        position: absolute;
+        right: 5px;
+        top: 3px;
+        color: #FEB200;
+        border: none;
+        height: 24px;
+        width: 24px;
+        background: none;
+        padding: 0;
+        font-size: 24px;
+        line-height: 1;
+    }
+}
+
+
+//=================================
+.header-button {
+    display: inline-block;
+    font: 700 0.9rem/2.9rem $fontUbuntu;
+    width: 167px;
+    height: 48px;
+    background: #FEB200;
+    color: #F7F7F7;
+    text-align: center;
+    &:hover {
+        box-shadow: 1px 1px 10px #ccc;
+        text-shadow: 1px 1px 1px #ccc;;
+    }
+}
+.button-catalog {
+    @include min1440 {
+        display: none;
+    }
+}
+.header-logo {
+    width: 101px;
+    height: 44px;
+}
+.menu-burger-button {
+    @include min1440 {
+        display: none;
+    }
+    display: inline-block;
+    width: 43px;
+    height: 5px;
+    background: #32A13C;
+    position: relative;
+    // transition: all 0.5s ease;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -9px;
+        left: 0;
+        height: 5px;
+        width: 100%;
+        background: #32A13C;
+        transition: all 0.3s ease;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 9px;
+        left: 0;
+        height: 5px;
+        width: 100%;
+        background: #32A13C;
+        transition: all 0.5s ease;
+    }
+}
+.burger-button_active {
+    height: 0;
+    &::after {
+        transform: rotate(-45deg);
+        bottom: -5px;
+    }
+    &::before {
+        transform: rotate(45deg);
+        bottom: -5px;
+    }
+}
+.header-basket { 
+    &__icon {
+        position: relative;
+        width: 44px;
+        height: 44px;
+        color: #32A13C;
+        font-size: 40px;
+        span {
+            font: 700 0.7rem/1.3 $fontUbuntu;
+            text-align: center;
+            position: absolute;
+            top: 3px;
+            right: 0;
+            width: 1rem;
+            height: 1rem;
+            border: 1px solid #32A13C;
+            border-radius: 50%;
+            background: #fff;
+
+        }
+    }
+    &__sum {
+        color: #32A13C;
+        span {
+            font: bold 1rem $fontUbuntu;
+        }
+    }
+}
+.header-nav {
+    width: 100%;
+    padding: 1rem 0;
+
+    &__link {
+        @include min1440 {
+            height: auto;
+            width: auto;
+        }
+        @include min760 {
+            height: 60px;
+        }
+        text-align: start;
+        width: 100%;
+        height: 47px;
+        margin: 0 auto;
+        span {
+            @include min760 {
+                width: 300px;
+            }
+            display: block;
+            margin: 0 auto;
+            width: 190px;
+        }
+
+        a {        
+            @include min1440 {
+                font: 400 1rem $fontUbuntu;
+                padding: 0;
+            } 
+            @include min760 {
+                font-size: 2rem;
+            }
+            font: 400 1.4rem/1.8 $fontUbuntu;
+            color: #000;
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+
+            &:hover {
+                @include min1440 {
+                    background: none;
+                    color: #FEB200;
+                    transition: color 0.2s ease;
+                }
+                background: #FEB200;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.header-nav-desktop {
+    @include min1440 {
+        display: block;
+            ul {
+               display: flex;
+            }
+    }
+    display: none;
+    max-width: 621px;
+}
+//=====================================
+
+.menu-burger {
+    @include min1440 {
+        display: none;
+
+    }
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: -764px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    transition: top 0.7s ease;
+}
+.header-block-clock {
+    @include min1440 {
+        display: none;
+    }
+    border-bottom: 1px solid #F2F2F2;
+    padding: 1rem 0.5rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.menu-burger_active {
+    top: 64px;
+}
+.header-subtitle {
+    display: none;
+    width: 167px;
+    color: #32A13C;
+    font: 700 1rem $fontUbuntu;
+}
+.header-subtitle-desktop {
+    @include min1440 {
+        display: block;
+    }
+    display: none;
+    width: 167px;
+    color: #32A13C;
+    font: 700 1rem $fontUbuntu;
+}
+.header-delivery-mobile {
+    @include min760 {
+        display: none;
+    }
+    h2 {
+       font: 400 0.8rem $fontUbuntu;
+       color: #FEB200; 
+    }
+    span {
+        font: 400 0.8rem $fontUbuntu;
+    }
+}
+.header-delivery-pad {
+    @include min760 {
+        display: block;
+    }
+    display: none;
+    position: relative;
+    padding-left: 3rem;
+    &__icons {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        color: #FEB200;
+        font-size: 32px;
+    }
+    h2 {
+       font: 400 1rem $fontUbuntu;
+       color: #FEB200; 
+    }
+    span {
+        font: 400 0.8rem $fontUbuntu;
+    }   
+}
+.header-work-time {
+    h2 {
+        @include min760 {
+            font-size: 1rem;
+        }
+        font: 400 0.8rem $fontUbuntu;
+        color: #FEB200; 
+     }
+     span {
+        @include min760 {
+            font-size: 1rem;
+        }
+         font: 400 0.8rem $fontUbuntu;
+     }
+}
+
+//====================================
+
+.header-block-tel {
+    @include min1440 {
+        display: none;
+    }
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0.5rem;
+    // height: 100px;
+    align-items: center;
+    border-top: 1px solid #F2F2F2;
+    a {
+        @include min760 {
+            flex: 0 0 auto;
+            width: 200px;
+            font-size: 1.5rem;
+        }
+        flex: 0 0 50%;
+        display: inline-block;
+        font: 700 1rem $fontUbuntu;
+        color: #FEB200;
+        span {
+            @include min760 {
+                font-size: 0.8rem;
+            }
+            font: 700 0.6rem $fontUbuntu;
+            color: #000;
+        }
+    }
+}
+.header-icons {
+    @include min760 {
+        display: none;
+    }
+    flex: 0 0 35%;
+    color: #FEB200;
+    font: 400 1rem $fontUbuntu;
+    height: 1.5rem;
+    
+
+    i {
+        font-size: 1.5rem;
+        position: relative;
+        top: 2px;
+    }
+}
+.header-lower-connect {
+    @include min760 {
+        display: flex;
+        width: 100px;
+    }
+    @include min1440 {
+        width: 400px;
+    } 
+    display: none;
+    
+    justify-content: space-between;
+    
+    height: 70px;
+    
+    padding: 0 5px;
+    &__icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    &__work-time {
+        @include min1440 {
+            display: flex;
+        }
+        display: none;
+        flex-direction: column;
+        padding: 12px 0 4px 0;
+        justify-content: space-between;
+        h2 {
+            font: 400 1rem $fontUbuntu;
+            color: #FEB200; 
+         }
+         span {
+             font: 400 1rem $fontUbuntu;
+         }
+    }
+
+}
+.header-icons-pad {
+    @include min760 {
+        display: block;
+    }
+    display: none;
+    flex: 0 0 35%;
+    color: #FEB200;
+    font: 400 1rem $fontUbuntu;
+    height: 1.5rem;
+    
+
+    i {
+        font-size: 1.5rem;
+        position: relative;
+        top: 2px;
+    }
+}
+.header-lower-connect__tel {
+    @include min1440 {
+        display: flex;
+    }
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    //padding: 3px 0;
+    a {
+        display: inline-block;
+        font: 700 1.3rem $fontUbuntu;
+        color: #FEB200;
+        span {
+            font: 700 0.9rem $fontUbuntu;
+            color: #000;
+        }
+    }
+    a:first-child {
+        margin-bottom: 10px;
+    }
+    a:last-child {
+        margin-bottom: 3px;
+    }
+}
+.header-pad {
+    @include min760 {
+        display: block;
+    }
+    display: none;
+}
+.header-desktop {
+    @include min1440 {
+        display: block;
+    }
+    display: none;
+}

@@ -1,0 +1,64 @@
+
+
+@import "staff/reset";
+@import "staff/icon";
+@import "staff/font";
+
+//=============================
+$fontOpenSans: 'OpenSans';
+$fontUbuntu: 'Ubuntu';
+$fontRoboto: 'Roboto';
+
+
+$orange: #FEB200;
+//$ColorOrange: #FEB200;
+
+//============================
+@mixin min450 {
+    @media (min-width: 450px) {
+        @content;
+    }
+ }
+ @mixin min600 {
+    @media (min-width: 600px) {
+        @content;
+    }
+ }
+@mixin min760 {
+    @media (min-width: 760px) {
+        @content;
+    }
+ }
+ @mixin min1024 {
+    @media (min-width: 1024px) {
+        @content;
+    }
+ }
+ @mixin min1440 {
+    @media (min-width: 1440px) {
+        @content;
+    }
+ }
+
+
+ // ===========================
+
+html {
+     font-size: 16px;
+
+}
+.section-main {
+    width: 100%;
+    height: 100%;
+    background: #F7F7F7;
+    //padding: 10px;
+
+} 
+.carousel-wrapper {
+    padding: 10px
+}
+@import "staff/header";
+@import "board";
+@import "box-sell";
+@import "product-card";
+@import "staff/footer";

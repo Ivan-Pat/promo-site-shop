@@ -1,0 +1,224 @@
+.section-board {
+    padding: 10px;
+    
+    max-width: 1440px;
+    margin: 0 auto;
+    @include min1440 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-height: 715px;
+    }
+}
+.board-body {
+    @include min1440 {
+        flex: 1 1 auto; 
+          
+    } 
+}
+
+
+// ==========================
+
+.board-content {
+    @include min1440 {
+        padding-left: 80px;
+    }
+    @include min760 {
+        min-height: 469px;
+    }
+    @include min1440 {
+        
+    }
+    background: #F28B57;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 362px;
+    overflow: hidden;
+    h2 {
+        @include min1440 {
+            font: 700 9rem $fontUbuntu;
+        }
+        @include min760 {
+            font-size: 7.4rem;
+        }
+        font: 700 16vw $fontRoboto; //2.8 -- 16
+        color: #F7F7F7;
+    }
+    h3 {
+        @include min1440 {
+            width: 100%;
+            font: 700 6rem $fontUbuntu;
+            padding: 1rem 2rem;
+        }
+        font: 400 4.7rem/7rem $fontRoboto; //4.7
+        background: #F7F7F7;
+        color: #F28B57;
+        text-align: start;
+        padding: 1rem;
+        height: 163px;
+        flex: 0 0 80%;
+        width: 90vw;
+        margin: 0 auto;
+        span {
+            @include min1440 {
+                width: 100%;
+                font: 700 6rem $fontUbuntu;
+            }
+            font: 400 4.7rem/7rem $fontRoboto; //4.7
+        }
+    }
+    &-img {
+        @include min450 {
+            width: 300px;
+            height: 200px;
+        }
+        @include min600 {
+            width: 350px;
+            height: 250px;
+        }
+        @include min760 {
+            width: 480px;
+            height: 330px;
+            right: 0;
+        }
+        @include min1440 {
+            width: 620px;
+            height: 400px;
+            right: 0;
+        }
+        position: absolute;
+        object-fit: cover;
+        width: 220px;
+        height: 130px;
+        right: -8%;
+        bottom: 5%;
+    }
+
+}
+
+.board-sale {
+    @include min760 {
+        min-height: 216px;
+    }
+    //width: 100%;
+    height: 152px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 10px;
+    
+    h2 {
+        @include min450 {
+            font-size: 3rem;
+        }
+        @include min760 {
+            font-size: 4.5rem;
+        }
+        font: 700 10vw $fontRoboto; //2-4.5
+        color: #F7F7F7;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+    &-img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+}
+
+//============================
+.catalog-title {
+    height: 53px;
+    background: #FEB200;
+    font: 400 1.2rem/3rem $fontUbuntu;
+    color: #fff;
+    padding-left: 15%;
+    text-align: start;
+    margin-bottom: 2px;
+}
+.section-catalog {
+    @include min1440 {
+        display: block;
+        flex: 0 0 17%;
+        position: static;
+        flex: 0 0 240px;
+        padding: 0 4px 0 0;
+        margin-right: 10px;
+        //background: #fff;
+    }
+    display: none;
+    position: fixed;
+    left: 0;
+    z-index: 10;
+    padding: 10px;
+    width: 100%;
+    max-height: 100%;
+    background: #F7F7F7;
+    overflow: auto;
+    scrollbar-color: #FEB200 #fff;
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+        background: #fff;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #FEB200;
+    }
+}
+.catalog_active {
+    display: block;
+} 
+.catalog-menu-button {
+    display: inline-block;
+    height: 45px;
+    font: 400 1.2rem/2.7rem $fontUbuntu;
+    color: #000;
+    background: #fff;
+    width: 100%;
+    text-align: start;
+    padding-left: 15%;
+    margin-bottom: 1px;
+    &:hover {
+        background: #FEB200;
+        color: #fff;
+    }
+    
+}
+.catalog-menu__item {
+    display: none;
+    a {
+        display: inline-block;
+        height: 45px;
+        font: 400 1.2rem/2.7rem $fontUbuntu;
+        color: #000;
+        background: #fff;
+        width: 100%;
+        text-align: start;
+        margin-bottom: 1px; 
+        padding-left: 50px;
+        &:hover {
+            background: #FEB200;
+            color: #fff;
+        }
+    }
+}
+.catalog-menu_active {
+    display: block;
+}
