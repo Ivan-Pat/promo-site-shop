@@ -52,13 +52,16 @@ html {
     height: 100%;
     background: #F7F7F7;
     //padding: 10px;
+    
 
 } 
-.carousel-wrapper {
-    padding: 10px
-}
+
 @import "staff/header";
 @import "board";
 @import "box-sell";
+
+@import "staff/swiper";
+@import "swiper-home-veget";
 @import "product-card";
+
 @import "staff/footer";

@@ -1,0 +1,93 @@
+.swiper-home-veget {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 30px 10px ;
+
+
+    
+}
+.swiper-home-veget__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    h2 {
+        font-family: $fontUbuntu;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $orange;
+        
+    }
+    i::before {
+        transform: rotate(180deg);
+        color: $orange;
+        font-size: 1.5rem;
+        position: relative;
+        top: 2px;
+    }
+    a {
+        color: $orange;
+        font: normal 1rem $fontUbuntu;
+        position: relative;
+        &:hover {
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                z-index: 1;
+                bottom: -3px;
+                left: 0;
+                width: 70%;
+                height: 2px;
+                background: $orange;
+            }
+
+        }
+    }
+}
+
+.home-veget__wrapper {
+    height: 500px;
+    width: 100%;
+    @include min450 {
+        height: 430px;
+    }
+}
+.home-veget__slide {
+    
+}
+.home-veget__pagination .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    background: #C4C4C4;
+    
+}
+.swiper-pagination-bullets {
+    position: relative;
+    bottom: -10px;
+}
+.home-veget__pagination .swiper-pagination-bullet-active {
+    
+    background: $orange;
+}
+.swiper-home-veget .swiper-button-prev::after,
+.swiper-home-veget .swiper-button-next::after {
+    color: $orange ;
+    font-size: 30px;
+    display: none;
+    @include min760 {
+        display: block;
+        position: relative;
+    }
+    
+}
+ .swiper-button-prev {
+    background: red;
+    left: -20px;
+    z-index: 10000;
+    
+}
+.swiper-button-next {
+    right: -20px;
+    background: red;
+}
