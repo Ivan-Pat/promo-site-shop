@@ -1,4 +1,4 @@
-.home-swiper-veget {
+.home-swiper {
     max-width: 360px;
     position: relative;
     margin: 0 auto;
@@ -17,7 +17,7 @@
 
     
 }
-.swiper-home-veget__title {
+.swiper-home__title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -56,7 +56,7 @@
     }
 }
 
-.home-veget__wrapper {
+.home-swiper__wrapper {
     height: 500px;
     max-width: 100%;
     
@@ -65,9 +65,7 @@
         height: 430px;
     }
 }
-.home-veget__slide {
-    
-}
+
 .home-veget__pagination .swiper-pagination-bullet {
     width: 20px;
     height: 20px;
@@ -83,16 +81,13 @@
     
     background: $orange;
 }
- .swiper-button-prev::after,
- .swiper-button-next::after {
+ .swiper-button-next::after,
+ .swiper-button-prev::after {
     color: $orange ;
     font-size: 40px;  
     font-weight: bold;
 }
-.swiper {
-
-}
-.swiper-button-prev {
+.swiper-but-l {
     @include min1550 {
         display: block;
     }
@@ -101,12 +96,11 @@
     left: -40px;
 
 }
-.swiper-button-next {
+.swiper-but-r {
     @include min1550 {
         display: block;
     }
     display: none;
     position: absolute;
     right: -40px;
-
 }
