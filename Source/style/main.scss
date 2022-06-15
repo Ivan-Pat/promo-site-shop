@@ -39,6 +39,11 @@ $orange: #FEB200;
         @content;
     }
  }
+ @mixin min1550 {
+    @media (min-width: 1550px) {
+        @content;
+    }
+ }
 
 
  // ===========================

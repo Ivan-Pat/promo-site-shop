@@ -29,7 +29,7 @@ function clickCatalog(event) {
   
 import Swiper, { Navigation, Pagination } from '../../Gulp/node_modules/swiper/swiper-bundle.esm.js';
 
-const swiper = new Swiper('.swiper-home-veget', {
+const swiper = new Swiper('.swiper-veget', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -50,11 +50,14 @@ const swiper = new Swiper('.swiper-home-veget', {
         watchOverflow: false, 
 
       },
-      768: {
+      760: {
         slidesPerView: 2,
         //slidesPerGroup: 1,
         watchOverflow: false, 
       }, 
+      1024: {
+        slidesPerView: 3,
+      },
       1440: {
         //loopedSlides: 9,
         slidesPerView: 4,

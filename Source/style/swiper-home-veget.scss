@@ -1,7 +1,18 @@
-.swiper-home-veget {
-    max-width: 1440px;
+.home-swiper-veget {
+    max-width: 360px;
+    position: relative;
     margin: 0 auto;
     padding: 30px 10px ;
+        
+    @include min760 {
+        max-width: 730px;
+    }
+    @include min1024 {
+        max-width: 1080px;
+    }
+    @include min1440 {
+        max-width: 1440px;
+    }
 
 
     
@@ -47,8 +58,10 @@
 
 .home-veget__wrapper {
     height: 500px;
-    width: 100%;
-    @include min450 {
+    max-width: 100%;
+    
+    
+    @include min760 {
         height: 430px;
     }
 }
@@ -70,24 +83,30 @@
     
     background: $orange;
 }
-.swiper-home-veget .swiper-button-prev::after,
-.swiper-home-veget .swiper-button-next::after {
+ .swiper-button-prev::after,
+ .swiper-button-next::after {
     color: $orange ;
-    font-size: 30px;
-    display: none;
-    @include min760 {
-        display: block;
-        position: relative;
-    }
-    
+    font-size: 40px;  
+    font-weight: bold;
 }
- .swiper-button-prev {
-    background: red;
-    left: -20px;
-    z-index: 10000;
-    
+.swiper {
+
+}
+.swiper-button-prev {
+    @include min1550 {
+        display: block;
+    }
+    display: none;
+    position: absolute;
+    left: -40px;
+
 }
 .swiper-button-next {
-    right: -20px;
-    background: red;
+    @include min1550 {
+        display: block;
+    }
+    display: none;
+    position: absolute;
+    right: -40px;
+
 }
