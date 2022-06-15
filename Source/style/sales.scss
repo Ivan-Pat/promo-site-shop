@@ -64,14 +64,14 @@
         font: bold 1.2rem $fontUbuntu;
         text-transform: uppercase;
         @include min450 {
-            font-size: 1.6rem;    
+            font-size: 1rem;    
         }
     }
     span {
         font: bold 2rem $fontUbuntu;
         margin-right: 10px;
         @include min450 {
-            font-size: 2.5rem; 
+            font-size: 2.7rem; 
         }
     }
     h2 {

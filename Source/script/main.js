@@ -1,30 +1,51 @@
 
 /*==================================================================*/
-  const burgerButton = document.querySelector(".menu-burger-button")
-  const burgerMenu = document.querySelector(".menu-burger")
-  
-  burgerButton.addEventListener("click",()=> {
-    burgerMenu.classList.toggle("menu-burger_active")
-    burgerButton.classList.toggle("burger-button_active")
-
-  } )
-/*==================================================================*/
+const burgerButton = document.querySelector(".menu-burger-button");
+const burgerMenu = document.querySelector(".menu-burger");
 const menuCatalog = document.querySelector(".section-catalog");
-const catalogHeaderBut = document.querySelector(".button-catalog")
 
-catalogHeaderBut.addEventListener("click", ()=> {
-  menuCatalog.classList.toggle("catalog_active")    
-}) 
 
-menuCatalog.addEventListener("click", clickCatalog)
+const bodyDOM = document.querySelector('body').addEventListener('click', mouseClick);
 
-function clickCatalog(event) {
-  let clickButton = event.target 
-  if (clickButton.classList.contains("catalog-menu-button")) {
-    clickButton.nextElementSibling.classList.toggle("catalog-menu_active")
-  }
-    
+ 
+function mouseClick(event) {
+
+    let clickEvent = event.target;
+
+    if (clickEvent.classList.contains('menu-burger-button')) clickBurgerMenu();
+    if (clickEvent.classList.contains('button-catalog')) clickButtonCatalog();
+    if (clickEvent.classList.contains('catalog-menu-button')) clickSubMenuCatalog(clickEvent);
+ }
+
+
+function clickBurgerMenu() {
+  burgerMenu.classList.toggle("menu-burger_active")
+  burgerButton.classList.toggle("burger-button_active")
+};
+function clickButtonCatalog() {
+  menuCatalog.classList.toggle("catalog_active") 
+  
 }
+function clickSubMenuCatalog(clickEvent) {
+  clickEvent.nextElementSibling.classList.toggle("catalog-menu_active")
+}
+//====================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*==================================================================*/
   
 import Swiper, { Navigation, Pagination } from '../../Gulp/node_modules/swiper/swiper-bundle.esm.js';
