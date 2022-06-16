@@ -19,15 +19,15 @@ function mouseClick(event) {
 
 
 function clickBurgerMenu() {
-  burgerMenu.classList.toggle("menu-burger_active")
-  burgerButton.classList.toggle("burger-button_active")
+  burgerMenu.classList.toggle("menu-burger_active");
+  burgerButton.classList.toggle("burger-button_active");
 };
 function clickButtonCatalog() {
-  menuCatalog.classList.toggle("catalog_active") 
+  menuCatalog.classList.toggle("catalog_active");
   
 }
 function clickSubMenuCatalog(clickEvent) {
-  clickEvent.nextElementSibling.classList.toggle("catalog-menu_active")
+  clickEvent.nextElementSibling.classList.toggle("catalog-menu_active");
 }
 //====================================================================
 
