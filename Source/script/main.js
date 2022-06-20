@@ -1,6 +1,6 @@
 
 /*==================================================================*/
-const burgerButton = document.querySelector(".menu-burger-button");
+const burgerButton = document.querySelector(".menu-burger-button-wrapper");
 const burgerMenu = document.querySelector(".menu-burger");
 const menuCatalog = document.querySelector(".section-catalog");
 
@@ -20,7 +20,8 @@ function mouseClick(event) {
 
 function clickBurgerMenu() {
   burgerMenu.classList.toggle("menu-burger_active");
-  burgerButton.classList.toggle("burger-button_active");
+  burgerButton.firstElementChild.classList.toggle("burger-button_active");
+  document.body.classList.toggle("fixed")
 };
 function clickButtonCatalog() {
   menuCatalog.classList.toggle("catalog_active");

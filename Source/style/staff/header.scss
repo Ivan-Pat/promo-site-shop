@@ -5,7 +5,7 @@
 .header-upper {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 15px 10px;
     align-items: center;
     position: relative;
     z-index: 10;
@@ -157,7 +157,7 @@
 }
 .header-nav {
     width: 100%;
-    padding: 1rem 0;
+    padding: 2rem 0;
 
     &__link {
         @include min1440 {
@@ -221,18 +221,23 @@
 //=====================================
 
 .menu-burger {
+    
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    transform: translateY(-100%);
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 15;
+    transition: transform 0.7s ease;
+    height: 100vh;
+    overflow: scroll;
+    display: block;
     @include min1440 {
         display: none;
 
     }
-    width: 100%;
-    background: #fff;
-    position: fixed;
-    top: -764px;
-    left: 0;
-    right: 0;
-    z-index: 5;
-    transition: top 0.7s ease;
 }
 .header-block-clock {
     @include min1440 {
@@ -245,7 +250,7 @@
     justify-content: space-between;
 }
 .menu-burger_active {
-    top: 64px;
+    transform: translateY(64px);
 }
 .header-subtitle {
     display: none;
