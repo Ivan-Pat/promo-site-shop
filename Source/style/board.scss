@@ -21,15 +21,7 @@
 // ==========================
 
 .board-content {
-    @include min1440 {
-        padding-left: 80px;
-    }
-    @include min760 {
-        min-height: 469px;
-    }
-    @include min1440 {
-        
-    }
+
     background: #F28B57;
     padding: 5px;
     border-radius: 5px;
@@ -39,6 +31,15 @@
     justify-content: space-around;
     min-height: 362px;
     overflow: hidden;
+    @include min1440 {
+        padding-left: 80px;
+    }
+    @include min760 {
+        min-height: 469px;
+    }
+    @include min1440 {
+        
+    }
     h2 {
         @include min1440 {
             font: 700 9rem $fontUbuntu;
@@ -142,15 +143,7 @@
 }
 
 //============================
-.catalog-title {
-    height: 53px;
-    background: #FEB200;
-    font: 400 1.2rem/3rem $fontUbuntu;
-    color: #fff;
-    padding-left: 15%;
-    text-align: start;
-    margin-bottom: 2px;
-}
+
 .section-catalog {
     @include min1440 {
         display: block;
@@ -185,6 +178,16 @@
 .catalog_active {
     display: block;
 } 
+.catalog-title {
+    height: 53px;
+    background: #FEB200;
+    font: 400 1.2rem/3rem $fontUbuntu;
+    color: #fff;
+    padding-left: 15%;
+    text-align: start;
+    margin-bottom: 2px;
+}
+
 .catalog-menu-button {
     display: inline-block;
     height: 45px;
@@ -193,7 +196,7 @@
     background: #fff;
     width: 100%;
     text-align: start;
-    padding-left: 15%;
+    padding: 0 max(50px, (100% - 300px) / 2);
     margin-bottom: 1px;
     &:hover {
         background: #FEB200;
@@ -211,12 +214,16 @@
         background: #fff;
         width: 100%;
         text-align: start;
-        margin-bottom: 1px; 
-        padding-left: 50px;
+        margin-bottom: 1px;
+         
+        padding: 0 max(80px, (100% - 200px) / 2);
         &:hover {
             background: #FEB200;
             color: #fff;
         }
+    }
+    li {
+
     }
 }
 .catalog-menu_active {
