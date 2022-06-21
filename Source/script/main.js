@@ -133,9 +133,41 @@ const swiperFruit = new Swiper('.swiper-fruit', {
         autoHeight: false,
       }
     },
-  
-    
- 
+}) 
+const swiperFeedback = new Swiper('.swiper-feedback', {
+  navigation: {
+    nextEl: '.swiper-but-feedback-r', 
+    prevEl: '.swiper-but-feedback-l',
+
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  spaceBetween: 10,
+  loop: false,
+  grabCursor: true,
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        //slidesPerGroup: 1,
+        watchOverflow: false, 
+
+      },
+      1024: {
+        slidesPerView: 2,
+      },
+      1440: {
+        //loopedSlides: 9,
+        slidesPerView: 3,
+        watchOverflow: false,
+
+        //slidesPerGroup: 1,
+        //slidesPerColumn: 2,
+        autoHeight: false,
+      }
+    },
 }) 
 
 

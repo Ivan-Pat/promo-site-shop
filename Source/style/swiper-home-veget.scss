@@ -58,15 +58,13 @@
 
 .home-swiper__wrapper {
     height: 500px;
-    max-width: 100%;
-    
-    
+    max-width: 100%; 
     @include min760 {
         height: 430px;
     }
 }
 
-.home-veget__pagination .swiper-pagination-bullet {
+.swiper-pagination-bullet {
     width: 20px;
     height: 20px;
     color: #fff;
@@ -75,10 +73,9 @@
 }
 .swiper-pagination-bullets {
     position: relative;
-    bottom: -10px;
+    bottom: -20px;
 }
-.home-veget__pagination .swiper-pagination-bullet-active {
-    
+ .swiper-pagination-bullet-active {
     background: $orange;
 }
  .swiper-button-next::after,
