@@ -37,10 +37,13 @@
     }
     &-price {
         @include min760 {
-            position: relative;
-            top: -40px;
+            
+            
             padding-right: 10px;
         }
+        position: relative;
+        top: -40px;
+        right: 10px;
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
@@ -68,7 +71,7 @@
 .product-card__img {
     width: 230px;
     height: 230px;
-    object-fit: cover;
+    object-fit: contain;
     margin: 0 40px;
 }
 .product-card-count {
@@ -110,14 +113,14 @@
     border-radius: 5px;
     color: #fff;
     background: $orange;
-    height: 46px;
+    max-height: 46px;
     
     width: 100%;
     max-width: 289px;
     padding: 5px;
     margin: 0 auto;
     text-align: center;
-    font: 700 1.1rem/2.5 $fontUbuntu;
+    font: 700 1.1rem/2.5rem $fontUbuntu;
     &:hover {
         cursor: pointer;
     }
