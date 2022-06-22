@@ -169,7 +169,32 @@ const swiperFeedback = new Swiper('.swiper-feedback', {
       }
     },
 }) 
+const swiperCatalog = new Swiper('.swiper-catalog', {
+  navigation: {
+    nextEl: null, 
+    prevEl: null,
 
+  },
+  pagination: {
+    el: '.swiper-pagination-catalog',
+    clickable: true,
+  },
+  spaceBetween: 10,
+  loop: false,
+  grabCursor: true,
+  autoplay: {
+    delay: 2000,
+  },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        //slidesPerGroup: 1,
+        watchOverflow: false, 
+
+      },
+
+    },
+}) 
 
 
 

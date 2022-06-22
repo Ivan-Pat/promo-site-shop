@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/home.min.css">
+    <link rel="stylesheet" href="style/catalog.min.css">
+    <title>Catalog</title>
+</head>
+<body>
+    @@include("html/home/header.html")
+    <main class="catalog-main">
+
+        <div class="catalog-main-wrapper">
+            <div class="catalog-aside">
+                <div class="catalog-aside-menu">
+                    @@include("./html/home/aside-menu.html")
+                </div>
+                @@include("html/catalog/catalog-aside-banner.html")
+            </div>
+
+
+            <div class="catalog-body">
+                @@include("html/catalog/swiper-catalog.html")
+                @@include("html/catalog/catalog-content.html")
+            </div>
+        </div>
+
+    </main>
+    @@include("html/home/footer.html")
+    <script src="./script/main.min.js"></script>
+</body>
+</html>

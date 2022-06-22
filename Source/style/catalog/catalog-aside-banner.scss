@@ -1,0 +1,98 @@
+.catalog-aside-banner {
+    display: none;
+    @include min1440 {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 690px;
+        overflow: hidden;
+    }
+}
+.catalog-aside-banner-circle {
+    width: 652px;
+    height: 652px;
+    border-radius: 50%;
+    background: #FCF783;
+    position: absolute;
+    top: 20px;
+    left: 30%;
+}
+.catalog-aside-sale-one {
+    position: relative;
+    height: 50px;
+    width: 100px;
+    left: 10%;
+    top: 25%;
+    transform: rotate(-20deg);
+    
+    span {
+        position: absolute;
+        font-family: $fontUbuntu;
+        &:nth-child(1) {
+            color: #EC4C4C;
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+        &:nth-child(2) {
+            font-size: 1rem;
+            top: 20px;
+            left: 70px;
+        }
+        &:nth-child(3) {
+            top: 40px;
+            left: -10px;
+            font-size: 0.8rem;
+        }
+    }
+}
+.catalog-aside-sale-two {
+    position: relative;
+    height: auto;
+    max-width: 150px;
+    left: 1%;
+    top: 38%;
+    transform: rotate(-30deg);
+
+    span {
+        color: #EC4C4C;
+        font-family: $fontUbuntu;
+        &:nth-child(1){
+            font-size: 2.3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        &:nth-child(2){
+            position: relative;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin: 0 auto;
+            // left: 5px;
+        }
+        &:nth-child(3){}
+    }
+}
+.catalog-aside-sale-three {
+    position: relative;
+    height: auto;
+    max-width: 150px;
+    left: 8%;
+    top: 50%;
+    transform: rotate(20deg);
+    span {
+        
+        font-family: $fontUbuntu;
+        &:nth-child(1){
+            color: #EC4C4C;
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+        &:nth-child(2){
+            color: #000;
+            font-size: 1rem;
+        }
+        &:nth-child(3){
+            color: #000;
+            font-size: 0.8rem;
+        }
+    }
+}
