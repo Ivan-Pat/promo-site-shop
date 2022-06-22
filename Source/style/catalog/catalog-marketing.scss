@@ -1,0 +1,64 @@
+.catalog-marketing {
+    max-width: $maxWidth;
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 535px;
+    padding: 5px;
+    @include min760 {
+        flex-direction: row;
+    }
+    @include min1440 {
+        height: 435px;
+    }
+}
+.box-marketing {
+    flex: 0 0 auto;
+    background: $orange;
+    color: #fff;
+    position: relative;
+    height: 167px;
+    overflow: hidden;
+    padding: 20px 25px;
+    border-radius: 10px;
+    
+    @include min760 {
+        height: 400px;
+        width: max(32%);
+    }
+    @include min1440 {
+        height: 263px;
+        width: 467px;
+    }
+    h2 {
+        font: bold 1.5rem $fontUbuntu;
+        margin-bottom: 20px;
+        @include min760 {
+            margin-top: 240px;
+        }
+        @include min1440 {
+            margin-top: 30px;
+        }
+    }
+    p {
+        font: 400 1rem $fontUbuntu;
+    }
+    img {
+        position: absolute;
+        left: calc(100% - 90px);
+        top: 15%;
+        width: 126px;
+        height: 126px;
+        border-radius: 50%;
+        
+        @include min760 {
+            width: 221px;
+            height: 221px;
+            left: calc(100% - 190px);
+            top: 5%;
+        }
+    }
+}
