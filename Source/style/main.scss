@@ -73,17 +73,17 @@ body {
 } 
 
 @import "staff/header";
-@import "board";
-@import "box-sell";
+@import "home/board";
+@import "home/box-sell";
 
 @import "staff/swiper";
-@import "swiper-home-veget";
+@import "home/swiper-home-veget";
 @import "staff/product-card";
 @import "staff/feedback-card";
 
-@import "sales";
-@import "app-mobile";
-@import "promo";
-@import "feedback";
+@import "home/sales";
+@import "home/app-mobile";
+@import "home/promo";
+@import "home/feedback";
 
 @import "staff/footer";
