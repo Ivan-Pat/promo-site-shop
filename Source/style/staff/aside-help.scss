@@ -1,0 +1,102 @@
+.aside-help {
+    width: 100%;
+
+}
+.aside-help-wrapper {
+    h3 {
+        font-family: $fontUbuntu;
+        font-size: min(2.5rem, 7vw);
+        font-weight: 200;
+        padding: min(20px, 3vw) 0;
+    }
+}
+.aside-help-subtitle {
+    border: 2px solid #8F8F8F;
+    width: 100%;
+    height: min(230px, 43vw);
+    padding: 0 min(40px, 3vw) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    span {
+        font-size: 1.2rem;
+        font-family: $fontUbuntu;
+        a {
+            color: black;
+        }
+        &:nth-child(1) {
+            font-weight: bold;
+        }
+        &:nth-child(3) {
+            a {
+                text-decoration: underline;
+                color: $orange;
+            }   
+
+         }
+
+        // &:nth-child() {}
+    }
+}
+.aside-help-box {
+    @include min760 {
+        display: flex;
+        justify-content: space-between;
+    }
+    @include min1024 {
+        flex-direction: column;
+        height: 400px;
+    }
+}
+.aside-help-contacts {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: min(215px, 37vw );
+    @include min760 {
+        justify-content: space-between;
+        width: 45%;
+    }
+    @include min1024 {
+        width: 100%;
+    }
+    span {
+        font-size: min(1.2rem, 4vw);
+        font-family: $fontUbuntu;
+        color: $orange;
+        a {
+            color: #000;
+        }
+        &:nth-child(n+3) {
+            text-decoration: underline;
+            
+        }
+    }
+}
+.aside-link {
+    color: $orange;
+}
+.aside-help-pay {
+    margin-top: 30px;
+    height: min(100px, 21vw );
+    @include min760 {
+        width: 45%;
+    }
+    @include min1024 {
+        width: 100%;
+    }
+    span {
+        font-size: min(1.2rem, 4vw);
+        font-family: $fontUbuntu;
+        color: $orange;
+        margin-bottom: 10px;
+        
+        display: inline-block;
+    }
+    p {
+        font-family: $fontUbuntu;
+        
+        font-size: min(1.2rem, 4vw);
+    }
+}

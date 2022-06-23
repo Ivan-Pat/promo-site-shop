@@ -1,0 +1,34 @@
+.payment-main-body {
+    h2 {
+        font-family: $fontUbuntu;
+        font-weight: 400;
+        font-size: min(2.5rem, 5vw );
+        color: $orange;
+        margin-bottom: min(25px, 3vw);
+        margin-top: min(40px, 4vw);
+    }
+    p {
+        font-family: $fontUbuntu;
+        font-weight: 400;
+        font-size: min(1.2rem, 4vw );
+        text-align: justify;
+        margin-top: min(40px, 4vw);;
+    }
+}
+.body-pay-navigation {
+    display: flex;
+    flex-direction: column;
+    font-family: $fontUbuntu;
+    font-size: min(1.2rem, 4vw );
+    span {
+        font-weight: bold;
+        &:nth-child(3) {
+            margin-bottom: 30px;
+        }
+    }
+    a {
+        font-weight: 400;
+        text-decoration: underline;
+        color: #000;
+    }
+}

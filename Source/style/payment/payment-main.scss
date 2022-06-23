@@ -1,0 +1,27 @@
+.payment-main {
+    padding: 5px;
+    max-width: $maxWidth;
+    margin: 0 auto;
+}
+.payment-main-wrapper {
+    @include min1024 {
+        display: flex;
+    }
+}
+.payment-main-aside {
+    @include min1024 {
+        flex: 1 0 auto;
+        width: 420px;
+        margin-right: 30px;
+    }
+}
+.payment-main-banner {
+    display: none;
+}
+.payment-main-body {
+    margin-bottom: 30px;
+    @include min1024 {
+        margin-top: 40px;
+        margin-bottom: 200px;
+    } 
+}

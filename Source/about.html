@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/home.min.css">
+    <link rel="stylesheet" href="style/about.min.css">
+    <title>About</title>
+</head>
+<body>
+    @@include("./html/home/header.html")
+    <main class="about-main">
+        <div class="about-main-wrapper">
+            <!-- @@include("./html/home/aside-menu.html") -->
+            @@include("./html/staff/navigation-body.html")          
+            @@include("./html/about/about-content.html")
+            @@include("./html/about/about-marketing.html")
+        </div>
+
+    </main>
+    
+    @@include("./html/home/footer.html")
+    <script src="./script/main.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/home.min.css">
+    <link rel="stylesheet" href="style/payment.min.css">
+    <title>Payment</title>
+</head>
+<body>
+    @@include("html/home/header.html")
+    <main class="payment-main">
+        <section class="navigation-body">
+            <div class="navigation-body-wrapper">
+               <a href="index.html">Главная </a>
+               <span>/</span>
+               <a href="about.html">Помощь </a>
+            </div>
+        </section>
+        <div class="payment-main-wrapper">
+            <div class="payment-main-aside">
+                @@include("html/staff/aside-help.html") 
+                @@include("html/payment/payment-banner-upper.html")
+            </div>
+            @@include("html/payment/payment-body.html")
+
+        </div>
+         @@include("html/payment/payment-banner-lower.html")
+    </main>
+    @@include("html/home/footer.html")
+    <script src="./script/main.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+@import "./staff/mixins.scss";
+@import "./staff/variables.scss";
+
+//================================
+@import "./payment/payment-main"; 
+@import "./staff/aside-help";
+@import "./staff/navigation-body";
+
+@import "./payment/payment-body";
+@import "./payment/payment-banner";
+// @import "";
+// @import "";
