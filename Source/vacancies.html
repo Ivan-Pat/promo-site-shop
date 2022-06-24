@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/home.min.css">
+    <link rel="stylesheet" href="./style/vacancies.min.css">
+    <title>Vacancies</title>
+</head>
+<body>
+    @@include("html/home/header.html")
+    <main class="main-vacancies" >
+        <div class="main-vacancies-wrapper">
+            <section class="navigation-body">
+                <div class="navigation-body-wrapper">
+                   <a href="index.html">Главная </a>
+                   <span>/</span>
+                   <a href="about.html">Вакансии </a>
+                </div>
+            </section>
+            <h2>Вакансии</h2>
+            <div class="main-vacancies-body">
+                @@include("html/cards/vacancies-card.html")
+                @@include("html/cards/vacancies-card.html")
+                @@include("html/cards/vacancies-card.html")
+                @@include("html/cards/vacancies-card.html")
+                @@include("html/cards/vacancies-card.html")
+                @@include("html/cards/vacancies-card.html")
+            </div>
+
+        </div>
+    </main>
+
+    @@include("html/home/footer.html")
+    <script src="./script/main.min.js"></script>
+</body>
+</html>

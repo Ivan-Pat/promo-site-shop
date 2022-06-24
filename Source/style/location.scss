@@ -1,0 +1,71 @@
+@import "./staff/mixins.scss";
+@import "./staff/variables.scss";
+
+@import "./staff/navigation-body";
+//================================
+
+.location-main {
+    background: $basicGrey;
+}
+.location-main-wrapper {
+    max-width: $maxWidth;
+    padding: 5px;
+    margin: 0 auto;
+    h2 {
+        font-family: $fontUbuntu;
+        font-size: min(1.5rem, 5vw);
+        font-weight: bold;
+        text-align: left;
+        color: $orange;
+        margin-bottom: 30px;
+    }
+}
+.location-map {
+    max-width: 700px;
+    margin-bottom: 30px;
+    //margin: 0 auto;
+    //height: 300px;
+
+
+}
+.location-body {
+    display: flex;
+    flex-direction: column;
+    @include min1024 {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: 200px;
+    }
+}
+.location-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: $fontUbuntu;
+    font-size: 1rem;
+    height: 250px;
+    margin-bottom: 50px;
+    gap: 20px;
+    @include min760 {
+        flex-direction: row;
+        height: 150px;
+    }
+    @include min1024 {
+        flex-direction: column;
+        margin-left: 70px;
+        height: 250px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex: 1 0 auto;
+        p:first-child {
+            font-weight: bold;
+        }
+    }
+    a {
+        color: black;
+        font-size: 1.2rem;
+    }
+}

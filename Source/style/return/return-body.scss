@@ -1,0 +1,35 @@
+.return-main-body {
+    h2 {
+        font-family: $fontUbuntu;
+        font-weight: 400;
+        font-size: min(2.5rem, 5vw );
+        color: $orange;
+        margin-bottom: min(25px, 3vw);
+        margin-top: min(40px, 4vw);
+    }
+    p {
+        font-family: $fontUbuntu;
+        font-weight: 400;
+        font-size: min(1.2rem, 4vw );
+        text-align: justify;
+        margin-top: min(40px, 4vw);
+        line-height: 1.5;
+    }
+}
+.return-navigation {
+    display: flex;
+    flex-direction: column;
+    font-family: $fontUbuntu;
+    line-height: 1.5;
+    font-size: min(1.2rem, 4vw );
+    margin-top: min(40px, 4vw);
+    span {
+        font-weight: bold;
+
+    }
+    a {
+        font-weight: 400;
+        text-decoration: underline;
+        color: #000;
+    }
+}

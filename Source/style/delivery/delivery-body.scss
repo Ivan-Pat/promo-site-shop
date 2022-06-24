@@ -1,0 +1,92 @@
+.delivery-main-body {
+    h2 {
+        font-family: $fontUbuntu;
+        font-weight: 400;
+        font-size: min(2.5rem, 5vw );
+        color: $orange;
+        margin-bottom: min(25px, 3vw);
+        margin-top: min(40px, 4vw);
+    }
+    p {
+        font-family: $fontUbuntu;
+        font-weight: 400;
+        font-size: min(1.2rem, 4vw );
+        text-align: justify;
+        margin-top: min(40px, 4vw);
+    }
+}
+.delivery-pay-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 150px;
+    font-family: $fontUbuntu;
+    font-size: min(1.2rem, 4vw );
+    span {
+        font-weight: bold;
+
+    }
+    a {
+        font-weight: 400;
+        text-decoration: underline;
+        color: #000;
+        
+    }
+}
+.delivery-table {
+    border: 2px solid #000;
+    border-collapse: collapse;
+    text-align: center;
+    min-height: 500px;
+    margin-top: min(40px, 4vw);
+    font-family: $fontUbuntu;
+    font-weight: 400px;
+    line-height: 1.5;
+    font-size: min(1.2rem, 4vw );
+    a {
+        color: $orange;
+        text-decoration: underline;
+    }
+    th, td, tr {
+        border: 2px solid #000;
+        vertical-align: middle;
+        min-height: 50px;
+    }
+
+    td:first-child {
+        width: 15%;
+        min-height: 50px;
+        display: none;
+        @include min760 {
+            display: table-cell;
+        }
+    
+    }
+    td:last-child {
+        display: none;
+        @include min760 {
+            display: table-cell;
+        }
+    }
+    th:nth-child(1) {
+        display: none;
+        @include min760 {
+            display: table-cell;
+        }
+        
+    }
+    th[colspan="3"] {
+        display: table-cell;
+        @include min760 {
+            display: none;
+        }
+    }   
+
+}
+.delivery-table-text {
+    text-align: left;
+    padding: 5px;
+}
+.delivery-table-resp {
+    display: none;
+}
