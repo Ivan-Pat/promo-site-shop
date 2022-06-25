@@ -12,8 +12,10 @@
     @@include("./html/home/header.html")
     <main class="about-main">
         <div class="about-main-wrapper">
-            <!-- @@include("./html/home/aside-menu.html") -->
-            @@include("./html/staff/navigation-body.html")          
+            @@include("./html/home/aside-menu.html")
+            @@include("./html/staff/navigation-body.html", {
+                "title": "О компании",
+            })          
             @@include("./html/about/about-content.html")
             @@include("./html/about/about-marketing.html")
         </div>

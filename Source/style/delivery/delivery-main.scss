@@ -1,9 +1,19 @@
+.delivery-main
+.section-catalog {
+    @include min1440 {
+        display: none;
+    }
+}
 .delivery-main {
     padding: 5px;
+    width: 100%;
+    background: $basicGrey;
+}
+.delivery-main-wrapper {
     max-width: $maxWidth;
     margin: 0 auto;
 }
-.delivery-main-wrapper {
+.delivery-body-wrapper {
     @include min1024 {
         display: flex;
     }

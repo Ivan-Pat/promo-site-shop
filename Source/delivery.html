@@ -11,22 +11,25 @@
 <body>
     @@include("html/home/header.html")
     <main class="delivery-main">
-        <section class="navigation-body">
-            <div class="navigation-body-wrapper">
-               <a href="index.html">Главная </a>
-               <span>/</span>
-               <a href="about.html">Помощь </a>
-            </div>
-        </section>
+
         <div class="delivery-main-wrapper">
-            <div class="delivery-main-aside">
-                @@include("html/staff/aside-help.html") 
-                @@include("html/delivery/delivery-banner-upper.html")
+            @@include("./html/home/aside-menu.html")
+            @@include("./html/staff/navigation-body.html", {
+                "title": "Доставка",
+            })
+            <div class="delivery-body-wrapper">
+                <div class="delivery-main-aside">
+                    @@include("html/staff/aside-help.html") 
+                    @@include("html/delivery/delivery-banner-upper.html")
+                </div>
+                @@include("html/delivery/delivery-body.html")
+    
             </div>
-            @@include("html/delivery/delivery-body.html")
+             @@include("html/delivery/delivery-banner-lower.html")
 
         </div>
-         @@include("html/delivery/delivery-banner-lower.html")
+
+
     </main>
     @@include("html/home/footer.html")
     <script src="./script/main.min.js"></script>

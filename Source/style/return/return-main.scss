@@ -1,9 +1,20 @@
+.return-main
+.section-catalog {
+    @include min1440 {
+        display: none;
+    }
+}
+
 .return-main {
     padding: 5px;
+    width: 100%;
+    background: $basicGrey;
+}
+.return-main-wrapper {
     max-width: $maxWidth;
     margin: 0 auto;
 }
-.return-main-wrapper {
+.return-body-wrapper {
     @include min1024 {
         display: flex;
     }

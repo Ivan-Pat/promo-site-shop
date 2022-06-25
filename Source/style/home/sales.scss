@@ -21,8 +21,7 @@
     }
 
     &__item{
-        height: 0;
-        padding-bottom: 100%;
+        height: min(800px, 100vw);
         position: relative;
         display: flex;
         align-items: center;
@@ -42,59 +41,51 @@
 }
 .sales-boxOne {
     width: 100%;
-    @include min760 {
-        // min-width: 760px;
-
-    }
+    
     @include min1024 {
         max-width: 60%;
-        padding-bottom: 550px;
     }
     @include min1440 {
-        padding-bottom: 800px;
     }
 }
 .sales-boxOne__title {
     position: absolute;
+    font-family: $fontUbuntu;
     z-index: 1;
     top: 40%;
     color: #67090C;
 
+    h2 {
+        font-family: $fontUbuntu;
+        font-weight: bold;
+        font-size: min(3rem, 7vw);
+        margin-bottom: 10px;
+    }
+
     span:last-child {
-        font: bold 1.2rem $fontUbuntu;
+        font-size: min(1.5rem, 6vw);
+        font-weight: bold;
         text-transform: uppercase;
-        @include min450 {
-            font-size: 1rem;    
-        }
+
     }
     span {
-        font: bold 2rem $fontUbuntu;
+        font-size: min(2.7rem, 10vw);
+        font-weight: bold;
         margin-right: 10px;
-        @include min450 {
-            font-size: 2.7rem; 
-        }
     }
-    h2 {
-        font: bold 1.5rem $fontUbuntu ;
-        margin-bottom: 10px;
-        @include min450 {
-            font-size: 3rem;
-        }
-    }
+
 
 }
 .sales-boxTwo {
     width: 100%;
     @include min760 {
         max-width: 49%;
-        padding-bottom: 350px;  
+        height: 395px; 
     }
     @include min1024 {
-        max-width: 40%;
-        padding-bottom: 271px; 
+        max-width: 40%; 
     }
     @include min1440 {
-        padding-bottom: 395px;
     }
 }
 .sales-boxTwo__title {
@@ -103,7 +94,6 @@
     color: #fff;
     top: 10%;
     left: 10%;
-
     font: bold 2rem $fontUbuntu;
     height: 100%;
     h2 {
@@ -120,29 +110,26 @@
     width: 100%;
     @include min760 {
         max-width: 49%;
-        padding-bottom: 350px;  
+        height: 395px; 
     }
     @include min1024 {
-        max-width: 40%;
-        padding-bottom: 271px; 
-    }
-    @include min1440 {
-        padding-bottom: 395px; 
+        max-width: 40%; 
     }
     
 }
 .sales-boxThree__title {
+    height: 100%;
     position: absolute;
-    z-index: 1;
-    color: #fff;
     top: 10%;
     left: 10%;
-
-    font: bold 2rem $fontUbuntu;
-    height: 100%;
+    z-index: 1;
+    color: #fff;
+    font-family: $fontUbuntu;
+    font-weight: bold;
+    font-size: 2rem;
+    
     h2 {
         width: 200px;
-
         display: inline-block;
     }
     span {

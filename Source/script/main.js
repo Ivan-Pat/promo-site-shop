@@ -19,16 +19,21 @@ function mouseClick(event) {
 
 
 function clickBurgerMenu() {
+
+  if(menuCatalog.classList.contains('catalog_active')) {
+    clickButtonCatalog()
+  }
   burgerMenu.classList.toggle("menu-burger_active");
   burgerButton.firstElementChild.classList.toggle("burger-button_active");
   document.body.classList.toggle("fixed")
 };
 function clickButtonCatalog() {
   menuCatalog.classList.toggle("catalog_active");
-  
+  document.body.classList.toggle("fixed");  
 }
 function clickSubMenuCatalog(clickEvent) {
   clickEvent.nextElementSibling.classList.toggle("catalog-menu_active");
+  
 }
 //====================================================================
 

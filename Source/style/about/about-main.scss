@@ -6,3 +6,9 @@
     max-width: $maxWidth;
     margin: 0 auto;
 }
+.about-main
+.section-catalog {
+    @include min1440 {
+        display: none;
+    }
+}

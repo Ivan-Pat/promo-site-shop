@@ -3,7 +3,12 @@
 
 @import "./staff/navigation-body";
 //================================
-
+.location-main
+.section-catalog {
+    @include min1440 {
+        display: none;
+    }
+}
 .location-main {
     background: $basicGrey;
 }
@@ -21,6 +26,7 @@
     }
 }
 .location-map {
+    width: 100%;
     max-width: 700px;
     margin-bottom: 30px;
     //margin: 0 auto;

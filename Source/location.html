@@ -6,23 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/home.min.css">
     <link rel="stylesheet" href="./style/location.min.css">
-    <title>location</title>
+    <title>Contacts</title>
 </head>
 <body>
     @@include("html/home/header.html")
     <main class="location-main">
         <div class="location-main-wrapper">
-            <section class="navigation-body">
-                <div class="navigation-body-wrapper">
-                   <a href="index.html">Главная </a>
-                   <span>/</span>
-                   <a href="about.html">Помощь </a>
-                </div>
-            </section>
+            @@include("./html/home/aside-menu.html")
+            @@include("./html/staff/navigation-body.html", {
+                "title": "Контакты",
+            })
             <h2>Адреса пунктов доставки и почтоматов</h2>
             <div class="location-body">
                 <div class="location-map">
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A140cb22b6b582a0713d8ab2aecd84191c6f45618f817c6fb94c3ebe7f1ade5fb&amp;width=100%25&amp;height=550&amp;lang=ru_RU&amp;scroll=false"></script>
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A51aae3aa4c8a39041d4852c8ac929766a810fabe673575274c6f11bd793efb96&amp;width=100%25&amp;height=550&amp;lang=ru_RU&amp;scroll=false"></script>
                 </div>
                 <div class="location-contacts">
                     <div class="location-contacts__item">

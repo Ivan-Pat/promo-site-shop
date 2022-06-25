@@ -11,23 +11,22 @@
 <body>
     @@include("html/home/header.html")
     <main class="return-main">
-        <section class="navigation-body">
-            <div class="navigation-body-wrapper">
-               <a href="index.html">Главная </a>
-               <span>/</span>
-               <a href="about.html">Помощь </a>
-            </div>
-        </section>
 
         <div class="return-main-wrapper">
-            <div class="return-main-aside">
-                @@include("html/staff/aside-help.html") 
-                @@include("html/return/return-banner-upper.html")
+            @@include("./html/home/aside-menu.html")
+            @@include("./html/staff/navigation-body.html", {
+                "title": "Условия возврата",
+            })
+            <div class="return-body-wrapper">
+                <div class="return-main-aside">
+                    @@include("html/staff/aside-help.html") 
+                    @@include("html/return/return-banner-upper.html")
+                </div>
+                @@include("html/return/return-body.html")
+    
             </div>
-            @@include("html/return/return-body.html")
-
+             @@include("html/return/return-banner-lower.html")
         </div>
-         @@include("html/return/return-banner-lower.html")
     </main>
     @@include("html/home/footer.html")
     <script src="./script/main.min.js"></script>

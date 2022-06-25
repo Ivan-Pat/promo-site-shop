@@ -12,13 +12,10 @@
     @@include("html/home/header.html")
     <main class="main-vacancies" >
         <div class="main-vacancies-wrapper">
-            <section class="navigation-body">
-                <div class="navigation-body-wrapper">
-                   <a href="index.html">Главная </a>
-                   <span>/</span>
-                   <a href="about.html">Вакансии </a>
-                </div>
-            </section>
+            @@include("./html/home/aside-menu.html")
+            @@include("./html/staff/navigation-body.html", {
+                "title": "Вакансии",
+            })
             <h2>Вакансии</h2>
             <div class="main-vacancies-body">
                 @@include("html/cards/vacancies-card.html")

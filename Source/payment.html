@@ -11,22 +11,21 @@
 <body>
     @@include("html/home/header.html")
     <main class="payment-main">
-        <section class="navigation-body">
-            <div class="navigation-body-wrapper">
-               <a href="index.html">Главная </a>
-               <span>/</span>
-               <a href="about.html">Помощь </a>
-            </div>
-        </section>
         <div class="payment-main-wrapper">
-            <div class="payment-main-aside">
-                @@include("html/staff/aside-help.html") 
-                @@include("html/payment/payment-banner-upper.html")
+            @@include("./html/home/aside-menu.html")
+            @@include("./html/staff/navigation-body.html", {
+                "title": "Оплата",
+            })
+            <div class="payment-body-wrapper">
+                <div class="payment-main-aside">
+                    @@include("html/staff/aside-help.html") 
+                    @@include("html/payment/payment-banner-upper.html")
+                </div>
+                @@include("html/payment/payment-body.html")
+    
             </div>
-            @@include("html/payment/payment-body.html")
-
+             @@include("html/payment/payment-banner-lower.html")
         </div>
-         @@include("html/payment/payment-banner-lower.html")
     </main>
     @@include("html/home/footer.html")
     <script src="./script/main.min.js"></script>

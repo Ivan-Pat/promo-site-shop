@@ -5,6 +5,16 @@
 //================================
 @import "./staff/vacancies-card";
 
+.main-vacancies
+.section-catalog {
+    @include min1440 {
+        display: none;
+    }
+}
+.main-vacancies {
+  width: 100%;
+  background: $basicGrey;
+}
 .main-vacancies-wrapper {
     max-width: $maxWidth;
     margin: 0 auto;
