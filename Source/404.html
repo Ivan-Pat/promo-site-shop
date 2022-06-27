@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/home.min.css">
+    <title>Sity supermarket</title>
+
+</head>
+<body>
+    @@include("html/home/header.html")
+    <div class="page-404">
+        <img src="@img/main/bg-error.png" alt="Milk">
+        @@include("./html/home/aside-menu.html")
+        @@include("html/staff/widget-nav.html")
+        <div class="page-404-wrapper">
+            <h2>Страница не найдена</h2>
+            <p>404</p>
+            <div class="page-404-butWrapper">
+                <span class="page-404-button"><a href="index.html">Главная</a></span>
+                <span class="page-404-button"><a href="catalog.html">Каталог товаров</a></span>
+                <span class="page-404-button"><a href="location.html">Контакты</a></span>
+            </div>
+        </div>
+    </div>
+    @@include("html/home/footer.html")
+    <script src="./script/main.min.js"></script>
+</body>
+</html>

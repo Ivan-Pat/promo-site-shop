@@ -1,0 +1,73 @@
+.page-404 {
+    position: relative;
+    width: 100%;
+    
+    img {
+        position: absolute;
+        top: 0;
+        height: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -3;
+        object-fit: cover;
+    }
+}
+.page-404
+.section-catalog {
+    @include min1440 {
+        display: none;
+    }
+}
+.page-404-wrapper {
+    padding: 5px;
+    font-family: $fontUbuntu;
+    color: $orange;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        font-size: min(2.5rem, 9vw);
+        margin-top: 50px;
+    }
+    p {
+        display: inline-block;
+        font-size: min( 25rem, 44vw);
+        margin-bottom: 30px;
+    }
+}
+.page-404-butWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 320px;
+    width: 100%;
+    align-items: center;
+    height: 180px;
+    margin-bottom: 30px;
+
+    @include min760 {
+        flex-direction: row;
+        max-width: 735px;
+    }
+}
+.page-404-button {
+    height: 46px;
+    width: 100%;
+    max-width: 293px;
+    background: $orange;
+    border-radius: 10px;
+    text-align: center;
+
+    @include min760 {
+        max-width: 225px;
+    }
+    a {
+        color: #fff;
+        font-size: 1.2rem;
+        line-height: 2.7rem;
+    }
+}
