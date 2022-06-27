@@ -3,7 +3,7 @@
 const burgerButton = document.querySelector(".menu-burger-button-wrapper");
 const burgerMenu = document.querySelector(".menu-burger");
 const menuCatalog = document.querySelector(".section-catalog");
-
+const widgetNavigation = document.querySelector(".widget-navigation")
 
 const bodyDOM = document.querySelector('body').addEventListener('click', mouseClick);
 
@@ -13,8 +13,9 @@ function mouseClick(event) {
     let clickEvent = event.target;
 
     if (clickEvent.classList.contains('menu-burger-button')) clickBurgerMenu();
-    if (clickEvent.classList.contains('button-catalog')) clickButtonCatalog();
-    if (clickEvent.classList.contains('catalog-menu-button')) clickSubMenuCatalog(clickEvent);
+    else if  (clickEvent.classList.contains('button-catalog')) clickButtonCatalog();
+    else if (clickEvent.classList.contains('catalog-menu-button')) clickSubMenuCatalog(clickEvent);
+    else if (clickEvent.classList.contains('widget-navigation-button')) clickWidgetNav(clickEvent);
  }
 
 
@@ -34,6 +35,9 @@ function clickButtonCatalog() {
 function clickSubMenuCatalog(clickEvent) {
   clickEvent.nextElementSibling.classList.toggle("catalog-menu_active");
   
+}
+function clickWidgetNav(clickEvent) {
+  widgetNavigation.classList.toggle("widget-navigation_active")
 }
 //====================================================================
 
